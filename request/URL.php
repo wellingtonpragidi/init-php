@@ -4,7 +4,7 @@ class URL {
     private $slug = NULL;
 
     static function root($extend = '') {
-        $root = dirname(__DIR__).'/';
+        $root = __DIR__.'/';
         $root = str_replace("\\", "/", $root);
         $root = str_replace($_SERVER["DOCUMENT_ROOT"], $_SERVER["SERVER_NAME"], $root);
         return self::protocol().$root.$extend;
