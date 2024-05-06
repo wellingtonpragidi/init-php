@@ -24,7 +24,7 @@ class Stylesheets {
 
         $iterator = new RecursiveIteratorIterator( 
             new RecursiveDirectoryIterator( 
-                PATH.'/assets/css/' 
+                PATH.'assets/css/' 
             ),
             RecursiveIteratorIterator::SELF_FIRST
         );
