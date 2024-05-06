@@ -13,6 +13,7 @@ class Stylesheets {
         $replace = str_replace('; ', ';', $replace);
         $replace = str_replace(';}', '}', $replace);
         $replace = str_replace(["\r\n", "\r", "\n", "\t", "  ", "   ", "    "], "", $replace);
+        return $replace;
     }
 
     static function css() {
