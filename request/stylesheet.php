@@ -18,8 +18,8 @@ class Stylesheets {
     static function css() {
         ob_start(['self', 'compress']);
 
-        if( file_exists(PATH.'/assets/fonts/fonts.css') ) {
-            include_once(PATH.'/assets/fonts/fonts.css');
+        if( file_exists(PATH.'assets/fonts/fonts.css') ) {
+            include_once(PATH.'assets/fonts/fonts.css');
         }
 
         $iterator = new RecursiveIteratorIterator( 
