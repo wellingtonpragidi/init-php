@@ -1,0 +1,12 @@
+ErrorDocument 403 https://%{HTTP_HOST}%{SERVER_NAME}%/403/
+ErrorDocument 404 https://%{HTTP_HOST}%{SERVER_NAME}%/404/
+
+RewriteEngine On
+
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
