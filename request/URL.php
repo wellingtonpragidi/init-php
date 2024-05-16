@@ -14,6 +14,10 @@ class URL {
         return self::protocol().$_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
     }
 
+    static function iG($action) {
+        return isset($_GET[$action]) ? $_GET[$action] : '';
+    }
+
     private static function protocol() {
         return isset($_SERVER["HTTPS"]) ? 'https://' : 'http://';
     }
