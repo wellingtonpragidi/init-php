@@ -17,7 +17,7 @@ class Stylesheets {
     }
 
     static function css() {
-        ob_start(['self', 'compress']);
+        ob_start('Stylesheets::compress');
 
         if( file_exists(PATH.'assets/fonts/fonts.css') ) {
             include_once(PATH.'assets/fonts/fonts.css');
